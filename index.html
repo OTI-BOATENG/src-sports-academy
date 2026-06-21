@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pentvars SRC Sports Academy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pT7LBvFy+0xfBWR2p15dGiDxC4ATRjBbKP+wq4OTAL/vc8pJuZD1fsXxCvqy9C0El67OgTNP4Y1bGllEA1l9Pg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/PU logo.png" alt="Pentvars SRC Sports Logo">
+                <h2>Pentvars SRC Sports</h2>
+            </div>
+            <button class="menu-toggle" type="button" aria-label="Toggle navigation" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="sports.html">Sports</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="booking.html">Book</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="hero">
+        <video class="hero-video" autoplay muted loop playsinline preload="auto">
+            <source src="images/SuperSport%20TV%20spot%20-%20%27What%20Are%20You%20Waiting%20For%27.mp4" type="video/mp4">
+        </video>
+        <div class="hero-content">
+            <h1>Welcome to Pentvars SRC Sports Academy</h1>
+            <p>Developing champions for the future</p>
+            <a href="booking.html" class="btn">Book Now</a>
+        </div>
+    </section>
+
+    <main class="main-content">
+        <section class="news-section">
+            <h2>Latest News</h2>
+            <div class="news-grid">
+                <article class="news-card featured">
+                    <h3>Summer Camp Registration Open</h3>
+                    <p>Join our intensive summer training camps to boost your skills this season. Limited spots available!</p>
+                    <a href="events.html">Read More →</a>
+                </article>
+                <article class="news-card">
+                    <img src="images/coach.jpg" alt="Basketball Coach" class="card-image lower-image">
+                    <h3>New Basketball Coach Joins Team</h3>
+                    <p>We're excited to welcome Coach Johnson to lead our elite basketball program with years of experience.</p>
+                        <a href="blog.html">Read More →</a>
+                </article>
+                <article class="news-card">
+                    <img src="images/tennis.jpg" alt="Tennis Winners" class="card-image">
+                    <h3>Tennis Tournament Winners</h3>
+                    <p>Congratulations to our young champions who showed exceptional skills at the regional tournament.</p>
+                    <a href="blog.html">Read More →</a>
+                </article>
+                <article class="news-card">
+                    <img src="images/fitnnes centre.jpg" alt="Fitness Workshop" class="card-image">
+                    <h3>Fitness Workshop Success</h3>
+                    <p>Our latest fitness workshop saw great participation with positive feedback from all participants.</p>
+                    <a href="activities.html">Read More →</a>
+                </article>
+            </div>
+        </section>
+
+        <aside class="sidebar">
+            <div class="sidebar-section">
+                <h3>Upcoming Events</h3>
+                <ul>
+                    <li><strong>Summer Soccer Camp:</strong> June 1-7</li>
+                    <li><strong>Basketball Tournament:</strong> July 15</li>
+                    <li><strong>Swimming Gala:</strong> August 20</li>
+                </ul>
+                <a href="events.html" class="btn">View All</a>
+            </div>
+            <div class="sidebar-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="register.html">Register Now</a></li>
+                    <li><a href="booking.html">Book a Session</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="sidebar-section">
+                <h3>Visitor Counter</h3>
+                <p id="counter"></p>
+            </div>
+        </aside>
+    </main>
+
+    <section class="section">
+        <h2>Featured Sports</h2>
+        <div class="sports-grid">
+            <div class="sport-card">
+                <img src="images/soccer.jpg" alt="Professional Soccer" class="card-image">
+                <h3>Soccer</h3>
+                <p>Join our soccer training to develop skills in ball control, teamwork, and tactical awareness with professional coaches.</p>
+                <a href="sports.html" class="btn">Learn More</a>
+            </div>
+            <div class="sport-card">
+                <img src="images/basketball.jpg" alt="Professional Basketball" class="card-image">
+                <h3>Basketball</h3>
+                <p>Develop your basketball abilities with professional coaching, advanced training techniques, and competitive play.</p>
+                <a href="sports.html" class="btn">Learn More</a>
+            </div>
+            <div class="sport-card">
+                <img src="images/tenniss.jpg" alt="Professional Tennis" class="card-image">
+                <h3>Tennis</h3>
+                <p>Master the art of tennis with expert instructors teaching technique, strategy, and mental toughness.</p>
+                <a href="sports.html" class="btn">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Search Sports</h2>
+        <input type="text" id="Search" placeholder="Search...." aria-label="Search sports">
+        <button onclick="searchSite()">Search</button>
+    </section>
+
+    <div id="footer-container"></div>
+</body>
+</html>
