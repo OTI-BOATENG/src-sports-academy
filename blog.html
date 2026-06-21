@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Pentvars SRC Sports Academy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pT7LBvFy+0xfBWR2p15dGiDxC4ATRjBbKP+wq4OTAL/vc8pJuZD1fsXxCvqy9C0El67OgTNP4Y1bGllEA1l9Pg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/PU logo.png" alt="Pentvars SRC Sports Logo">
+                <h2>Pentvars SRC Sports</h2>
+            </div>
+            <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="sports.html">Sports</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="booking.html">Book</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- Blog Hero Section -->
+        <section class="blog-hero">
+            <div class="hero-content">
+                <h1>Sports Academy Blog</h1>
+                <p>Stay updated with the latest news, announcements, and community stories from Pentvars SRC Sports Academy</p>
+                <div class="search-container">
+                    <input type="text" id="blogSearch" placeholder="Search blog posts..." aria-label="Search blog posts">
+                    <button onclick="searchBlogPosts()" class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Posts Section -->
+        <section class="blog-posts" aria-labelledby="blog-posts-heading">
+            <div class="container">
+                <h2 id="blog-posts-heading">Latest Posts</h2>
+
+                <!-- Blog Post Cards -->
+                <div class="blog-grid">
+                    <!-- Announcement Post -->
+                    <article class="blog-card" data-category="announcement">
+                        <div class="blog-image-wrapper">
+                            <img src="images/award.jpg" alt="Academy Awards Ceremony" class="blog-image">
+                            <span class="blog-category">Announcement</span>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-date">
+                                    <i class="fas fa-calendar"></i> May 8, 2026
+                                </span>
+                                <span class="blog-author">
+                                    <i class="fas fa-user"></i> Academy Admin
+                                </span>
+                            </div>
+                            <h3>Annual Sports Awards Ceremony 2026</h3>
+                            <p class="blog-excerpt">Join us for the prestigious Annual Sports Awards Ceremony where we'll celebrate outstanding achievements in athletics, coaching excellence, and community contributions throughout the year.</p>
+                            <div class="blog-tags">
+                                <span class="tag">Awards</span>
+                                <span class="tag">Ceremony</span>
+                                <span class="tag">Recognition</span>
+                            </div>
+                            <a href="#" class="read-more-btn">
+                                <i class="fas fa-arrow-right"></i> Read More
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Sports News Post -->
+                    <article class="blog-card" data-category="sports-news">
+                        <div class="blog-image-wrapper">
+                            <img src="images/basketball.jpg" alt="Basketball Championship Victory" class="blog-image">
+                            <span class="blog-category">Sports News</span>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-date">
+                                    <i class="fas fa-calendar"></i> May 5, 2026
+                                </span>
+                                <span class="blog-author">
+                                    <i class="fas fa-user"></i> Sports Editor
+                                </span>
+                            </div>
+                            <h3>University Basketball Team Claims Regional Championship</h3>
+                            <p class="blog-excerpt">In an exhilarating display of skill and teamwork, our university basketball team secured victory in the regional championships, advancing to national competitions.</p>
+                            <div class="blog-tags">
+                                <span class="tag">Basketball</span>
+                                <span class="tag">Championship</span>
+                                <span class="tag">Victory</span>
+                            </div>
+                            <a href="#" class="read-more-btn">
+                                <i class="fas fa-arrow-right"></i> Read More
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Community Engagement Post -->
+                    <article class="blog-card" data-category="community">
+                        <div class="blog-image-wrapper">
+                            <img src="images/community traning.jpg" alt="Community Training Session" class="blog-image">
+                            <span class="blog-category">Community</span>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-date">
+                                    <i class="fas fa-calendar"></i> May 3, 2026
+                                </span>
+                                <span class="blog-author">
+                                    <i class="fas fa-user"></i> Community Coordinator
+                                </span>
+                            </div>
+                            <h3>Free Community Fitness Workshops for Families</h3>
+                            <p class="blog-excerpt">We're excited to announce free fitness workshops designed for families! Join us for fun, interactive sessions that promote health, wellness, and family bonding through sports and exercise.</p>
+                            <div class="blog-tags">
+                                <span class="tag">Family</span>
+                                <span class="tag">Fitness</span>
+                                <span class="tag">Workshops</span>
+                            </div>
+                            <a href="#" class="read-more-btn">
+                                <i class="fas fa-arrow-right"></i> Read More
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Academy Update Post -->
+                    <article class="blog-card" data-category="academy-update">
+                        <div class="blog-image-wrapper">
+                            <img src="images/elite coach.jpg" alt="New Elite Coaching Program" class="blog-image">
+                            <span class="blog-category">Academy Update</span>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-date">
+                                    <i class="fas fa-calendar"></i> April 28, 2026
+                                </span>
+                                <span class="blog-author">
+                                    <i class="fas fa-user"></i> Program Director
+                                </span>
+                            </div>
+                            <h3>Introducing Our New Elite Coaching Certification Program</h3>
+                            <p class="blog-excerpt">We're proud to launch our comprehensive Elite Coaching Certification Program, designed to elevate coaching standards and develop the next generation of sports professionals.</p>
+                            <div class="blog-tags">
+                                <span class="tag">Coaching</span>
+                                <span class="tag">Certification</span>
+                                <span class="tag">Professional Development</span>
+                            </div>
+                            <a href="#" class="read-more-btn">
+                                <i class="fas fa-arrow-right"></i> Read More
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Student Success Story -->
+                    <article class="blog-card" data-category="student-story">
+                        <div class="blog-image-wrapper">
+                            <img src="images/swimming.jpg" alt="Student Swimming Achievement" class="blog-image">
+                            <span class="blog-category">Student Story</span>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-date">
+                                    <i class="fas fa-calendar"></i> April 25, 2026
+                                </span>
+                                <span class="blog-author">
+                                    <i class="fas fa-user"></i> Student Success Team
+                                </span>
+                            </div>
+                            <h3>From Beginner to Champion: Sarah's Swimming Journey</h3>
+                            <p class="blog-excerpt">Meet Sarah, who started as a beginner swimmer and now represents our academy at national competitions. Her dedication and hard work inspire us all.</p>
+                            <div class="blog-tags">
+                                <span class="tag">Swimming</span>
+                                <span class="tag">Success Story</span>
+                                <span class="tag">Inspiration</span>
+                            </div>
+                            <a href="#" class="read-more-btn">
+                                <i class="fas fa-arrow-right"></i> Read More
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Parent Engagement Post -->
+                    <article class="blog-card" data-category="parent-engagement">
+                        <div class="blog-image-wrapper">
+                            <img src="images/Team culture.jpg" alt="Parent-Child Sports Day" class="blog-image">
+                            <span class="blog-category">Parent Engagement</span>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-date">
+                                    <i class="fas fa-calendar"></i> April 20, 2026
+                                </span>
+                                <span class="blog-author">
+                                    <i class="fas fa-user"></i> Parent Liaison
+                                </span>
+                            </div>
+                            <h3>Annual Parent-Child Sports Day Registration Now Open</h3>
+                            <p class="blog-excerpt">Get ready for our biggest family event of the year! The Annual Parent-Child Sports Day offers fun activities, games, and bonding experiences for the whole family.</p>
+                            <div class="blog-tags">
+                                <span class="tag">Family</span>
+                                <span class="tag">Sports Day</span>
+                                <span class="tag">Registration</span>
+                            </div>
+                            <a href="#" class="read-more-btn">
+                                <i class="fas fa-arrow-right"></i> Read More
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Signup -->
+        <section class="newsletter-section">
+            <div class="container">
+                <div class="newsletter-content">
+                    <h2>Stay Updated</h2>
+                    <p>Subscribe to our newsletter for the latest sports news, academy updates, and community events.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email address" required aria-label="Email address">
+                        <button type="submit" class="btn-primary">
+                            <i class="fas fa-envelope"></i> Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script>
+        // Blog search functionality
+        function searchBlogPosts() {
+            const searchTerm = document.getElementById('blogSearch').value.toLowerCase();
+            const blogCards = document.querySelectorAll('.blog-card');
+
+            blogCards.forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const excerpt = card.querySelector('.blog-excerpt').textContent.toLowerCase();
+                const tags = Array.from(card.querySelectorAll('.tag')).map(tag => tag.textContent.toLowerCase());
+
+                const matchesSearch = title.includes(searchTerm) ||
+                                    excerpt.includes(searchTerm) ||
+                                    tags.some(tag => tag.includes(searchTerm));
+
+                card.style.display = matchesSearch ? 'block' : 'none';
+            });
+
+            // Show message if no results
+            const visibleCards = document.querySelectorAll('.blog-card[style*="display: block"]');
+            if (visibleCards.length === 0 && searchTerm !== '') {
+                alert('No blog posts found matching your search. Try different keywords.');
+            }
+        }
+
+        // Add enter key support for search
+        document.getElementById('blogSearch').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                searchBlogPosts();
+            }
+        });
+    </script>
+
+    <div id="footer-container"></div>
+</body>
+</html>

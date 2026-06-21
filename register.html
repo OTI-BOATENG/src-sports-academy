@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Pentvars SRC Sports Academy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pT7LBvFy+0xfBWR2p15dGiDxC4ATRjBbKP+wq4OTAL/vc8pJuZD1fsXxCvqy9C0El67OgTNP4Y1bGllEA1l9Pg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/PU logo.png" alt="Pentvars SRC Sports Logo">
+                <h2>Pentvars SRC Sports</h2>
+            </div>
+            <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="sports.html">Sports</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="register.html" class="active">Register</a></li>
+                <li><a href="booking.html">Book</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- Registration Hero Section -->
+        <section class="register-hero">
+            <div class="hero-content">
+                <h1>Join Pentvars SRC Sports Academy</h1>
+                <p>Register to be part of our thriving sports community and unlock exclusive benefits</p>
+            </div>
+        </section>
+
+        <!-- Registration Form Section -->
+        <section class="register-section" aria-labelledby="register-heading">
+            <div class="container">
+                <div class="register-container">
+                    <!-- Form Column -->
+                    <div class="form-column">
+                        <h2 id="register-heading">Create Your Account</h2>
+                        <p class="form-subtitle">Complete the form below to register for Pentvars SRC Sports Academy</p>
+
+                        <!-- Registration Form -->
+                        <form id="registrationForm" class="registration-form" novalidate>
+                            <!-- Success Message -->
+                            <div id="successMessage" class="success-message" style="display: none;">
+                                <i class="fas fa-check-circle"></i>
+                                <h3>Registration Successful!</h3>
+                                <p>A confirmation email has been sent to <span id="confirmationEmail"></span></p>
+                                <p>Please check your email to verify your account.</p>
+                            </div>
+
+                            <!-- Error Message -->
+                            <div id="errorMessage" class="error-message" style="display: none;">
+                                <i class="fas fa-exclamation-circle"></i>
+                                <p id="errorText"></p>
+                            </div>
+
+                            <!-- Form Content -->
+                            <div id="formContent">
+                                <!-- Full Name -->
+                                <div class="form-group">
+                                    <label for="fullName">
+                                        <i class="fas fa-user"></i> Full Name <span class="required">*</span>
+                                    </label>
+                                    <input 
+                                        type="text" 
+                                        id="fullName" 
+                                        name="fullName" 
+                                        placeholder="John Doe"
+                                        required 
+                                        aria-required="true"
+                                        aria-describedby="nameError">
+                                    <span id="nameError" class="error-text"></span>
+                                </div>
+
+                                <!-- Email -->
+                                <div class="form-group">
+                                    <label for="email">
+                                        <i class="fas fa-envelope"></i> Email Address <span class="required">*</span>
+                                    </label>
+                                    <input 
+                                        type="email" 
+                                        id="email" 
+                                        name="email" 
+                                        placeholder="your.email@example.com"
+                                        required 
+                                        aria-required="true"
+                                        aria-describedby="emailError">
+                                    <span id="emailError" class="error-text"></span>
+                                </div>
+
+                                <!-- Phone Number -->
+                                <div class="form-group">
+                                    <label for="phone">
+                                        <i class="fas fa-phone"></i> Phone Number <span class="required">*</span>
+                                    </label>
+                                    <input 
+                                        type="tel" 
+                                        id="phone" 
+                                        name="phone" 
+                                        placeholder="(+233) 456-789-870"
+                                        required 
+                                        aria-required="true"
+                                        aria-describedby="phoneError">
+                                    <span id="phoneError" class="error-text"></span>
+                                </div>
+
+                                <!-- Date of Birth -->
+                                <div class="form-group">
+                                    <label for="dateOfBirth">
+                                        <i class="fas fa-calendar"></i> Date of Birth <span class="required">*</span>
+                                    </label>
+                                    <input 
+                                        type="date" 
+                                        id="dateOfBirth" 
+                                        name="dateOfBirth" 
+                                        required 
+                                        aria-required="true"
+                                        aria-describedby="dobError">
+                                    <span id="dobError" class="error-text"></span>
+                                </div>
+
+                                <!-- Sport Selection -->
+                                <div class="form-group">
+                                    <label for="sport">
+                                        <i class="fas fa-medal"></i> Primary Sport <span class="required">*</span>
+                                    </label>
+                                    <select 
+                                        id="sport" 
+                                        name="sport" 
+                                        required 
+                                        aria-required="true"
+                                        aria-describedby="sportError">
+                                        <option value="">-- Select a Sport --</option>
+                                        <option value="Basketball">Basketball</option>
+                                        <option value="Soccer">Soccer (Football)</option>
+                                        <option value="Tennis">Tennis</option>
+                                        <option value="Swimming">Swimming</option>
+                                        <option value="Rugby">Rugby</option>
+                                        <option value="Volleyball">Volleyball</option>
+                                        <option value="Taekwondo">Taekwondo</option>
+                                        <option value="Judo">Judo</option>
+                                        <option value="Gymnastics">Gymnastics</option>
+                                        <option value="Handball">Handball</option>
+                                        <option value="Table Tennis">Table Tennis</option>
+                                        <option value="Wrestling">Wrestling</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                    <span id="sportError" class="error-text"></span>
+                                </div>
+
+                                <!-- Password -->
+                                <div class="form-group">
+                                    <label for="password">
+                                        <i class="fas fa-lock"></i> Password <span class="required">*</span>
+                                    </label>
+                                    <div class="password-input-wrapper">
+                                        <input 
+                                            type="password" 
+                                            id="password" 
+                                            name="password" 
+                                            placeholder="Enter a strong password"
+                                            required 
+                                            aria-required="true"
+                                            aria-describedby="passwordError passwordHint">
+                                        <button type="button" class="toggle-password" onclick="togglePasswordVisibility('password')">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                    </div>
+                                    <p id="passwordHint" class="password-hint">
+                                        <i class="fas fa-info-circle"></i> 
+                                        Password must be at least 8 characters long with uppercase, lowercase, and numbers
+                                    </p>
+                                    <span id="passwordError" class="error-text"></span>
+                                </div>
+
+                                <!-- Confirm Password -->
+                                <div class="form-group">
+                                    <label for="confirmPassword">
+                                        <i class="fas fa-lock"></i> Confirm Password <span class="required">*</span>
+                                    </label>
+                                    <div class="password-input-wrapper">
+                                        <input 
+                                            type="password" 
+                                            id="confirmPassword" 
+                                            name="confirmPassword" 
+                                            placeholder="Confirm your password"
+                                            required 
+                                            aria-required="true"
+                                            aria-describedby="confirmError">
+                                        <button type="button" class="toggle-password" onclick="togglePasswordVisibility('confirmPassword')">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                    </div>
+                                    <span id="confirmError" class="error-text"></span>
+                                </div>
+
+                                <!-- Address (Optional) -->
+                                <div class="form-group">
+                                    <label for="address">
+                                        <i class="fas fa-map-marker-alt"></i> Address <span class="optional">(Optional)</span>
+                                    </label>
+                                    <input 
+                                        type="text" 
+                                        id="address" 
+                                        name="address" 
+                                        placeholder="123 Sports Lane, City, Country"
+                                        aria-describedby="addressInfo">
+                                    <p id="addressInfo" class="form-info">We use this to better serve you with local events</p>
+                                </div>
+
+                                <!-- Email Subscription -->
+                                <div class="form-group checkbox-group">
+                                    <label for="newsletter" class="checkbox-label">
+                                        <input 
+                                            type="checkbox" 
+                                            id="newsletter" 
+                                            name="newsletter"
+                                            checked>
+                                        <span class="checkbox-text">
+                                            <i class="fas fa-envelope"></i> Subscribe to our newsletter for latest updates and exclusive offers
+                                        </span>
+                                    </label>
+                                </div>
+
+                                <!-- CAPTCHA Verification -->
+                                <div class="form-group captcha-group">
+                                    <label for="captcha">
+                                        <i class="fas fa-shield-alt"></i> Security Verification <span class="required">*</span>
+                                    </label>
+                                    <div class="captcha-container">
+                                        <div class="captcha-challenge">
+                                            <span id="captchaQuestion">What is <span id="num1">5</span> + <span id="num2">3</span>?</span>
+                                        </div>
+                                        <input 
+                                            type="number" 
+                                            id="captcha" 
+                                            name="captcha" 
+                                            placeholder="Enter the answer"
+                                            required 
+                                            aria-required="true"
+                                            aria-describedby="captchaError">
+                                        <button type="button" class="captcha-refresh" onclick="generateCaptcha()" title="Generate new CAPTCHA">
+                                            <i class="fas fa-redo"></i>
+                                        </button>
+                                    </div>
+                                    <span id="captchaError" class="error-text"></span>
+                                </div>
+
+                                <!-- Terms and Conditions -->
+                                <div class="form-group checkbox-group">
+                                    <label for="terms" class="checkbox-label">
+                                        <input 
+                                            type="checkbox" 
+                                            id="terms" 
+                                            name="terms"
+                                            required 
+                                            aria-required="true"
+                                            aria-describedby="termsError">
+                                        <span class="checkbox-text">
+                                            I agree to the <a href="#" class="link">Terms and Conditions</a> and <a href="#" class="link">Privacy Policy</a> <span class="required">*</span>
+                                        </span>
+                                    </label>
+                                    <span id="termsError" class="error-text"></span>
+                                </div>
+
+                                <!-- Submit Button -->
+                                <button type="submit" class="btn btn-submit" id="submitBtn">
+                                    <i class="fas fa-user-plus"></i> Create Account
+                                </button>
+
+                                <!-- Login Link -->
+                                <p class="login-link">
+                                    Already have an account? <a href="#" onclick="toggleLoginModal()">Sign in here</a>
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Benefits Column -->
+                    <div class="benefits-column">
+                        <h3>Why Join Us?</h3>
+                        <div class="benefits-list">
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <h4>World-Class Training</h4>
+                                <p>Learn from experienced coaches and certified instructors</p>
+                            </div>
+
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <h4>Community</h4>
+                                <p>Join a vibrant community of athletes and sports enthusiasts</p>
+                            </div>
+
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-trophy"></i>
+                                </div>
+                                <h4>Competitions</h4>
+                                <p>Participate in local and national sports competitions</p>
+                            </div>
+
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <h4>Certification</h4>
+                                <p>Earn recognized certifications in your chosen sport</p>
+                            </div>
+
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-heartbeat"></i>
+                                </div>
+                                <h4>Health & Wellness</h4>
+                                <p>Improve your fitness and overall well-being</p>
+                            </div>
+
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-calendar-alt"></i>
+                                </div>
+                                <h4>Events & Activities</h4>
+                                <p>Access exclusive events and training activities</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script>
+        // Initialize CAPTCHA
+        let captchaAnswer = 0;
+
+        function generateCaptcha() {
+            const num1 = Math.floor(Math.random() * 20) + 1;
+            const num2 = Math.floor(Math.random() * 20) + 1;
+            captchaAnswer = num1 + num2;
+            
+            document.getElementById('num1').textContent = num1;
+            document.getElementById('num2').textContent = num2;
+            document.getElementById('captcha').value = '';
+        }
+
+        // Toggle Password Visibility
+        function togglePasswordVisibility(fieldId) {
+            const field = document.getElementById(fieldId);
+            const btn = event.currentTarget;
+            const icon = btn.querySelector('i');
+            
+            if (field.type === 'password') {
+                field.type = 'text';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                field.type = 'password';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
+        }
+
+        // Form Validation
+        function validateForm() {
+            const errors = {};
+            
+            // Full Name
+            const fullName = document.getElementById('fullName').value.trim();
+            if (!fullName) {
+                errors.fullName = 'Full name is required';
+            } else if (fullName.length < 3) {
+                errors.fullName = 'Full name must be at least 3 characters';
+            }
+
+            // Email
+            const email = document.getElementById('email').value.trim();
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!email) {
+                errors.email = 'Email is required';
+            } else if (!emailRegex.test(email)) {
+                errors.email = 'Please enter a valid email address';
+            }
+
+            // Phone
+            const phone = document.getElementById('phone').value.trim();
+            const phoneRegex = /^[\d\s\-\(\)]+$/;
+            if (!phone) {
+                errors.phone = 'Phone number is required';
+            } else if (!phoneRegex.test(phone) || phone.replace(/\D/g, '').length < 10) {
+                errors.phone = 'Please enter a valid phone number';
+            }
+
+            // Date of Birth
+            const dob = document.getElementById('dateOfBirth').value;
+            if (!dob) {
+                errors.dateOfBirth = 'Date of birth is required';
+            } else {
+                const birthDate = new Date(dob);
+                const today = new Date();
+                let age = today.getFullYear() - birthDate.getFullYear();
+                const monthDiff = today.getMonth() - birthDate.getMonth();
+                if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+                    age--;
+                }
+                if (age < 5) {
+                    errors.dateOfBirth = 'You must be at least 5 years old to register';
+                }
+            }
+
+            // Sport
+            const sport = document.getElementById('sport').value;
+            if (!sport) {
+                errors.sport = 'Please select a sport';
+            }
+
+            // Password
+            const password = document.getElementById('password').value;
+            const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
+            if (!password) {
+                errors.password = 'Password is required';
+            } else if (!passwordRegex.test(password)) {
+                errors.password = 'Password must be at least 8 characters with uppercase, lowercase, and numbers';
+            }
+
+            // Confirm Password
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            if (!confirmPassword) {
+                errors.confirmPassword = 'Please confirm your password';
+            } else if (password !== confirmPassword) {
+                errors.confirmPassword = 'Passwords do not match';
+            }
+
+            // CAPTCHA
+            const captchaInput = parseInt(document.getElementById('captcha').value);
+            if (!document.getElementById('captcha').value) {
+                errors.captcha = 'Please complete the security verification';
+            } else if (captchaInput !== captchaAnswer) {
+                errors.captcha = 'Incorrect answer. Please try again.';
+                generateCaptcha();
+            }
+
+            // Terms
+            if (!document.getElementById('terms').checked) {
+                errors.terms = 'You must agree to the terms and conditions';
+            }
+
+            return errors;
+        }
+
+        // Display Errors
+        function displayErrors(errors) {
+            // Clear all previous errors
+            document.querySelectorAll('.error-text').forEach(el => el.textContent = '');
+
+            // Display new errors
+            Object.keys(errors).forEach(field => {
+                const errorElement = document.getElementById(field + 'Error');
+                if (errorElement) {
+                    errorElement.textContent = errors[field];
+                }
+            });
+        }
+
+        // Simulate Email Confirmation
+        function simulateEmailConfirmation(email) {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    console.log('Confirmation email sent to:', email);
+                    resolve(true);
+                }, 1500);
+            });
+        }
+
+        // Form Submission
+        document.getElementById('registrationForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const errors = validateForm();
+
+            if (Object.keys(errors).length > 0) {
+                displayErrors(errors);
+                document.getElementById('errorMessage').style.display = 'none';
+                return;
+            }
+
+            // Clear errors
+            document.getElementById('errorMessage').style.display = 'none';
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+
+            // Get form data
+            const email = document.getElementById('email').value;
+            const fullName = document.getElementById('fullName').value;
+            const phone = document.getElementById('phone').value;
+            const sport = document.getElementById('sport').value;
+            const newsletter = document.getElementById('newsletter').checked;
+
+            // Simulate email sending
+            await simulateEmailConfirmation(email);
+
+            // Show success message
+            document.getElementById('confirmationEmail').textContent = email;
+            document.getElementById('formContent').style.display = 'none';
+            document.getElementById('successMessage').style.display = 'block';
+
+            // Log registration data (in a real app, this would be sent to a server)
+            console.log({
+                fullName,
+                email,
+                phone,
+                sport,
+                newsletter,
+                timestamp: new Date().toLocaleString()
+            });
+        });
+
+        // Initialize on page load
+        window.addEventListener('load', function() {
+            generateCaptcha();
+        });
+
+        // Real-time validation
+        document.getElementById('email').addEventListener('blur', function() {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const errorEl = document.getElementById('emailError');
+            if (this.value && !emailRegex.test(this.value)) {
+                errorEl.textContent = 'Please enter a valid email address';
+            } else {
+                errorEl.textContent = '';
+            }
+        });
+
+        document.getElementById('password').addEventListener('input', function() {
+            const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
+            const hint = document.getElementById('passwordHint');
+            if (this.value && passwordRegex.test(this.value)) {
+                hint.classList.add('valid');
+            } else {
+                hint.classList.remove('valid');
+            }
+        });
+
+        document.getElementById('confirmPassword').addEventListener('blur', function() {
+            const password = document.getElementById('password').value;
+            const errorEl = document.getElementById('confirmError');
+            if (this.value && password !== this.value) {
+                errorEl.textContent = 'Passwords do not match';
+            } else {
+                errorEl.textContent = '';
+            }
+        });
+    </script>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="toggleLoginModal()">&times;</span>
+            <h2>Sign In to Your Account</h2>
+            <p class="form-subtitle">Enter your credentials to access your sports academy account</p>
+
+            <!-- Login Form -->
+            <form id="loginForm" class="login-form" novalidate>
+                <!-- Error Message -->
+                <div id="errorMessage" class="error-message" style="display: none;">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <p id="errorText"></p>
+                </div>
+
+                <!-- Success Message -->
+                <div id="successMessage" class="success-message" style="display: none;">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Login Successful!</h3>
+                    <p>Welcome back! Redirecting to your dashboard...</p>
+                </div>
+
+                <!-- Form Content -->
+                <div id="formContent">
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="email">
+                            <i class="fas fa-envelope"></i> Email Address <span class="required">*</span>
+                        </label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="your.email@example.com"
+                            required
+                            aria-required="true"
+                            aria-describedby="emailError">
+                        <span id="emailError" class="error-text"></span>
+                    </div>
+
+                    <!-- Password -->
+                    <div class="form-group">
+                        <label for="password">
+                            <i class="fas fa-lock"></i> Password <span class="required">*</span>
+                        </label>
+                        <div class="password-input-wrapper">
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                placeholder="Enter your password"
+                                required
+                                aria-required="true"
+                                aria-describedby="passwordError">
+                            <button type="button" class="toggle-password" onclick="togglePasswordVisibility('password')">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                        <span id="passwordError" class="error-text"></span>
+                    </div>
+
+                    <!-- Remember Me -->
+                    <div class="form-group checkbox-group">
+                        <label for="rememberMe" class="checkbox-label">
+                            <input
+                                type="checkbox"
+                                id="rememberMe"
+                                name="rememberMe">
+                            <span class="checkbox-text">
+                                <i class="fas fa-clock"></i> Remember me for 30 days
+                            </span>
+                        </label>
+                    </div>
+
+                    <!-- Forgot Password -->
+                    <div class="form-group">
+                        <a href="#" class="forgot-password-link">
+                            <i class="fas fa-key"></i> Forgot your password?
+                        </a>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-submit" id="submitBtn">
+                        <i class="fas fa-sign-in-alt"></i> Sign In
+                    </button>
+
+                    <!-- Register Link -->
+                    <p class="register-link">
+                        <a href="#" onclick="toggleLoginModal()">Close</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

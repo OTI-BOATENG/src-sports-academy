@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book - Pentvars SRC Sports Academy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pT7LBvFy+0xfBWR2p15dGiDxC4ATRjBbKP+wq4OTAL/vc8pJuZD1fsXxCvqy9C0El67OgTNP4Y1bGllEA1l9Pg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/PU logo.png" alt="Pentvars SRC Sports Logo">
+                <h2>Pentvars SRC Sports</h2>
+            </div>
+            <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="sports.html">Sports</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="booking.html" class="active">Book</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Booking Hero Section -->
+    <section class="booking-hero">
+        <div class="hero-content">
+            <h1>Book Your Training Session</h1>
+            <p>Reserve your spot in our professional sports training programs</p>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="booking-section" aria-labelledby="booking-heading">
+        <div class="container">
+            <div class="booking-container">
+                <!-- Instructions Column -->
+                <div class="instructions-column">
+                    <h2>Booking Instructions</h2>
+                    <div class="instructions-list">
+                        <div class="instruction-item">
+                            <div class="instruction-icon">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <div class="instruction-content">
+                                <h4>Select Your Sport</h4>
+                                <p>Choose from our wide range of sports training programs</p>
+                            </div>
+                        </div>
+
+                        <div class="instruction-item">
+                            <div class="instruction-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="instruction-content">
+                                <h4>Pick Date & Time</h4>
+                                <p>Select your preferred training session date and time slot</p>
+                            </div>
+                        </div>
+
+                        <div class="instruction-item">
+                            <div class="instruction-icon">
+                                <i class="fas fa-user-check"></i>
+                            </div>
+                            <div class="instruction-content">
+                                <h4>Provide Details</h4>
+                                <p>Fill in your personal information for booking confirmation</p>
+                            </div>
+                        </div>
+
+                        <div class="instruction-item">
+                            <div class="instruction-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="instruction-content">
+                                <h4>Receive Confirmation</h4>
+                                <p>Get instant email confirmation and session details</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="booking-info">
+                        <h3>Important Notes</h3>
+                        <ul>
+                            <li>Bookings are confirmed upon email verification</li>
+                            <li>Cancellation policy: 24 hours notice required</li>
+                            <li>Bring appropriate sports equipment and attire</li>
+                            <li>Arrive 15 minutes before your session</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Form Column -->
+                <div class="form-column">
+                    <h2 id="booking-heading">Book Your Session</h2>
+                    <p class="form-subtitle">Complete the form below to reserve your training session</p>
+
+                    <!-- Booking Form -->
+                    <form id="bookingForm" class="booking-form" novalidate>
+                        <!-- Error Message -->
+                        <div id="errorMessage" class="error-message" style="display: none;">
+                            <i class="fas fa-exclamation-circle"></i>
+                            <p id="errorText"></p>
+                        </div>
+
+                        <!-- Success Message -->
+                        <div id="successMessage" class="success-message" style="display: none;">
+                            <i class="fas fa-check-circle"></i>
+                            <h3>Booking Confirmed!</h3>
+                            <p>Your session has been booked successfully. Check your email for confirmation details.</p>
+                        </div>
+
+                        <!-- Form Content -->
+                        <div id="formContent">
+                            <!-- Full Name -->
+                            <div class="form-group">
+                                <label for="fullName">
+                                    <i class="fas fa-user"></i> Full Name <span class="required">*</span>
+                                </label>
+                                <input
+                                    type="text"
+                                    id="fullName"
+                                    name="fullName"
+                                    placeholder="Enter your full name"
+                                    required
+                                    aria-required="true"
+                                    aria-describedby="fullNameError">
+                                <span id="fullNameError" class="error-text"></span>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="form-group">
+                                <label for="email">
+                                    <i class="fas fa-envelope"></i> Email Address <span class="required">*</span>
+                                </label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="your.email@example.com"
+                                    required
+                                    aria-required="true"
+                                    aria-describedby="emailError">
+                                <span id="emailError" class="error-text"></span>
+                            </div>
+
+                            <!-- Phone Number -->
+                            <div class="form-group">
+                                <label for="phone">
+                                    <i class="fas fa-phone"></i> Phone Number <span class="required">*</span>
+                                </label>
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    placeholder="+27 XX XXX XXXX"
+                                    required
+                                    aria-required="true"
+                                    aria-describedby="phoneError">
+                                <span id="phoneError" class="error-text"></span>
+                            </div>
+
+                            <!-- Sport Selection -->
+                            <div class="form-group">
+                                <label for="sport">
+                                    <i class="fas fa-running"></i> Select Sport <span class="required">*</span>
+                                </label>
+                                <select
+                                    id="sport"
+                                    name="sport"
+                                    required
+                                    aria-required="true"
+                                    aria-describedby="sportError">
+                                    <option value="">Choose a sport</option>
+                                    <optgroup label="Ball Sports">
+                                        <option value="soccer">Soccer/Football</option>
+                                        <option value="basketball">Basketball</option>
+                                        <option value="volleyball">Volleyball</option>
+                                        <option value="rugby">Rugby</option>
+                                        <option value="handball">Handball</option>
+                                    </optgroup>
+                                    <optgroup label="Racket Sports">
+                                        <option value="tennis">Tennis</option>
+                                        <option value="table-tennis">Table Tennis</option>
+                                        <option value="badminton">Badminton</option>
+                                        <option value="squash">Squash</option>
+                                    </optgroup>
+                                    <optgroup label="Combat Sports">
+                                        <option value="boxing">Boxing</option>
+                                        <option value="karate">Karate</option>
+                                        <option value="judo">Judo</option>
+                                        <option value="taekwondo">Taekwondo</option>
+                                        <option value="wrestling">Wrestling</option>
+                                    </optgroup>
+                                    <optgroup label="Athletics & Fitness">
+                                        <option value="athletics">Athletics</option>
+                                        <option value="swimming">Swimming</option>
+                                        <option value="gymnastics">Gymnastics</option>
+                                        <option value="fitness">General Fitness</option>
+                                        <option value="yoga">Yoga & Pilates</option>
+                                    </optgroup>
+                                    <optgroup label="Other Sports">
+                                        <option value="cricket">Cricket</option>
+                                        <option value="hockey">Hockey</option>
+                                        <option value="netball">Netball</option>
+                                        <option value="chess">Chess</option>
+                                        <option value="esports">E-Sports</option>
+                                    </optgroup>
+                                </select>
+                                <span id="sportError" class="error-text"></span>
+                            </div>
+
+                            <!-- Session Duration -->
+                            <div class="form-group">
+                                <label for="sessionDuration">
+                                    <i class="fas fa-hourglass-half"></i> Session Duration <span class="required">*</span>
+                                </label>
+                                <select
+                                    id="sessionDuration"
+                                    name="sessionDuration"
+                                    required
+                                    aria-required="true"
+                                    aria-describedby="sessionDurationError">
+                                    <option value="">Select duration</option>
+                                    <option value="30">30 minutes - ₵100</option>
+                                    <option value="45">45 minutes - ₵133</option>
+                                    <option value="60">1 hour - ₵165</option>
+                                    <option value="90">1.5 hours - ₵230</option>
+                                    <option value="120">2 hours - ₵300</option>
+                                </select>
+                                <span id="sessionDurationError" class="error-text"></span>
+                            </div>
+
+                            <!-- Coach Selection -->
+                            <div class="form-group">
+                                <label for="coach">
+                                    <i class="fas fa-user-tie"></i> Preferred Coach
+                                </label>
+                                <select
+                                    id="coach"
+                                    name="coach"
+                                    aria-describedby="coachError">
+                                    <option value="">Any available coach</option>
+                                    <option value="john-doe">John Doe (Soccer Expert)</option>
+                                    <option value="jane-smith">Jane Smith (Basketball Specialist)</option>
+                                    <option value="mike-johnson">Mike Johnson (Combat Sports)</option>
+                                    <option value="sarah-williams">Sarah Williams (Tennis Pro)</option>
+                                    <option value="david-brown">David Brown (Swimming Coach)</option>
+                                    <option value="lisa-davis">Lisa Davis (Fitness Trainer)</option>
+                                </select>
+                                <span id="coachError" class="error-text"></span>
+                            </div>
+
+                            <!-- Skill Level -->
+                            <div class="form-group">
+                                <label for="skillLevel">
+                                    <i class="fas fa-chart-line"></i> Skill Level
+                                </label>
+                                <select
+                                    id="skillLevel"
+                                    name="skillLevel"
+                                    aria-describedby="skillLevelError">
+                                    <option value="beginner">Beginner</option>
+                                    <option value="intermediate">Intermediate</option>
+                                    <option value="advanced">Advanced</option>
+                                    <option value="professional">Professional</option>
+                                </select>
+                                <span id="skillLevelError" class="error-text"></span>
+                            </div>
+
+                            <!-- Equipment Rental -->
+                            <div class="form-group">
+                                <label for="equipmentRental">
+                                    <i class="fas fa-tools"></i> Equipment Rental
+                                </label>
+                                <div class="checkbox-group">
+                                    <label for="equipmentRental" class="checkbox-label">
+                                        <input
+                                            type="checkbox"
+                                            id="equipmentRental"
+                                            name="equipmentRental">
+                                        <span class="checkbox-text">
+                                            <i class="fas fa-dumbbell"></i> Rent sports equipment (+₵33)
+                                        </span>
+                                    </label>
+                                </div>
+                                <span id="equipmentRentalError" class="error-text"></span>
+                            </div>
+
+                            <!-- Session Date -->
+                            <div class="form-group">
+                                <label for="sessionDate">
+                                    <i class="fas fa-calendar-alt"></i> Session Date <span class="required">*</span>
+                                </label>
+                                <input
+                                    type="date"
+                                    id="sessionDate"
+                                    name="sessionDate"
+                                    required
+                                    aria-required="true"
+                                    aria-describedby="sessionDateError"
+                                    min="">
+                                <span id="sessionDateError" class="error-text"></span>
+                            </div>
+
+                            <!-- Session Time -->
+                            <div class="form-group">
+                                <label for="sessionTime">
+                                    <i class="fas fa-clock"></i> Session Time <span class="required">*</span>
+                                </label>
+                                <select
+                                    id="sessionTime"
+                                    name="sessionTime"
+                                    required
+                                    aria-required="true"
+                                    aria-describedby="sessionTimeError">
+                                    <option value="">Select time slot</option>
+                                    <option value="06:00">6:00 AM</option>
+                                    <option value="07:00">7:00 AM</option>
+                                    <option value="08:00">8:00 AM</option>
+                                    <option value="09:00">9:00 AM</option>
+                                    <option value="10:00">10:00 AM</option>
+                                    <option value="11:00">11:00 AM</option>
+                                    <option value="12:00">12:00 PM</option>
+                                    <option value="13:00">1:00 PM</option>
+                                    <option value="14:00">2:00 PM</option>
+                                    <option value="15:00">3:00 PM</option>
+                                    <option value="16:00">4:00 PM</option>
+                                    <option value="17:00">5:00 PM</option>
+                                    <option value="18:00">6:00 PM</option>
+                                    <option value="19:00">7:00 PM</option>
+                                    <option value="20:00">8:00 PM</option>
+                                </select>
+                                <span id="sessionTimeError" class="error-text"></span>
+                            </div>
+
+                            <!-- Session Type -->
+                            <div class="form-group">
+                                <label for="sessionType">
+                                    <i class="fas fa-users"></i> Session Type
+                                </label>
+                                <select
+                                    id="sessionType"
+                                    name="sessionType"
+                                    aria-describedby="sessionTypeError">
+                                    <option value="individual">Individual Training</option>
+                                    <option value="group">Group Training</option>
+                                    <option value="private">Private Coaching</option>
+                                    <option value="assessment">Skills Assessment</option>
+                                </select>
+                                <span id="sessionTypeError" class="error-text"></span>
+                            </div>
+
+                            <!-- Additional Notes -->
+                            <div class="form-group">
+                                <label for="notes">
+                                    <i class="fas fa-comment"></i> Additional Notes
+                                </label>
+                                <textarea
+                                    id="notes"
+                                    name="notes"
+                                    placeholder="Any special requirements or notes..."
+                                    rows="3"
+                                    aria-describedby="notesError"></textarea>
+                                <span id="notesError" class="error-text"></span>
+                            </div>
+
+                            <!-- CAPTCHA -->
+                            <div class="captcha-container">
+                                <div class="captcha-challenge">
+                                    <span id="captchaQuestion"></span>
+                                </div>
+                                <input
+                                    type="text"
+                                    id="captchaAnswer"
+                                    placeholder="Answer"
+                                    maxlength="3"
+                                    aria-label="CAPTCHA answer"
+                                    aria-describedby="captchaError">
+                                <button type="button" class="captcha-refresh" onclick="generateCaptcha()" aria-label="Refresh CAPTCHA">
+                                    <i class="fas fa-sync-alt"></i>
+                                </button>
+                                <span id="captchaError" class="error-text"></span>
+                            </div>
+
+                            <!-- Terms Agreement -->
+                            <div class="form-group checkbox-group">
+                                <label for="termsAgree" class="checkbox-label">
+                                    <input
+                                        type="checkbox"
+                                        id="termsAgree"
+                                        name="termsAgree"
+                                        required
+                                        aria-required="true">
+                                    <span class="checkbox-text">
+                                        <i class="fas fa-file-contract"></i> I agree to the <a href="#" class="link">booking terms and conditions</a>
+                                    </span>
+                                </label>
+                                <span id="termsError" class="error-text"></span>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <button type="submit" class="btn btn-submit" id="submitBtn">
+                                <i class="fas fa-calendar-check"></i> Book Session
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section">
+        <div class="container">
+            <h2>Session Pricing</h2>
+            <p class="pricing-subtitle">Transparent pricing for all our training services</p>
+
+            <div class="pricing-grid">
+                <div class="pricing-card featured">
+                    <div class="pricing-header">
+                        <h3>Individual Training</h3>
+                        <div class="price">
+                            <span class="amount">₵165</span>
+                            <span class="period">/hour</span>
+                        </div>
+                        <p class="pricing-desc">One-on-one personalized coaching</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Personal coach attention</li>
+                        <li><i class="fas fa-check"></i> Customized training plan</li>
+                        <li><i class="fas fa-check"></i> Flexible scheduling</li>
+                        <li><i class="fas fa-check"></i> Progress tracking</li>
+                        <li><i class="fas fa-check"></i> Equipment included</li>
+                    </ul>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Group Training</h3>
+                        <div class="price">
+                            <span class="amount">₵100</span>
+                            <span class="period">/person/hour</span>
+                        </div>
+                        <p class="pricing-desc">Small group sessions (2-6 people)</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Group motivation</li>
+                        <li><i class="fas fa-check"></i> Team building</li>
+                        <li><i class="fas fa-check"></i> Cost effective</li>
+                        <li><i class="fas fa-check"></i> Social interaction</li>
+                        <li><i class="fas fa-check"></i> Equipment included</li>
+                    </ul>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Private Coaching</h3>
+                        <div class="price">
+                            <span class="amount">₵230</span>
+                            <span class="period">/hour</span>
+                        </div>
+                        <p class="pricing-desc">Elite level coaching</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Expert coach</li>
+                        <li><i class="fas fa-check"></i> Advanced techniques</li>
+                        <li><i class="fas fa-check"></i> Video analysis</li>
+                        <li><i class="fas fa-check"></i> Performance metrics</li>
+                        <li><i class="fas fa-check"></i> Premium equipment</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pricing-note">
+                <h4>Additional Services</h4>
+                <ul>
+                    <li><strong>Equipment Rental:</strong> ₵33 per session</li>
+                    <li><strong>Skills Assessment:</strong> ₵67 (one-time fee)</li>
+                    <li><strong>Online Coaching:</strong> ₵100 per hour</li>
+                    <li><strong>Membership Discount:</strong> 20% off for members</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <p class="faq-subtitle">Everything you need to know about booking and training</p>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-question-circle"></i>
+                        <h4>How far in advance should I book?</h4>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We recommend booking at least 24 hours in advance. For popular time slots and coaches, we suggest booking 1-2 weeks ahead to secure your preferred session.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-question-circle"></i>
+                        <h4>What should I bring to my session?</h4>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Comfortable athletic clothing, water bottle, and towel. We provide all necessary sports equipment. If you have specific gear preferences, please mention it during booking.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-question-circle"></i>
+                        <h4>Can I cancel or reschedule my booking?</h4>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, you can cancel or reschedule up to 24 hours before your session at no charge. Cancellations within 24 hours may incur a 50% fee. Contact us directly for changes.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-question-circle"></i>
+                        <h4>Do you offer beginner-friendly sessions?</h4>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! We cater to all skill levels from complete beginners to professionals. Our coaches will assess your level and create an appropriate training plan.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-question-circle"></i>
+                        <h4>Are there any age restrictions?</h4>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We welcome participants from 6 years old and up. For children under 12, we recommend parental supervision. Some sports may have specific age requirements.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-question-circle"></i>
+                        <h4>What payment methods do you accept?</h4>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We accept cash, card payments, EFT transfers, and mobile payments. Payment is required at the time of booking confirmation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2>What Our Athletes Say</h2>
+            <p class="testimonials-subtitle">Real experiences from our training community</p>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"The coaching at Pentvars SRC is exceptional. My tennis game has improved dramatically in just a few sessions. The facilities are top-notch and the staff is incredibly professional."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/Sarah Johnson.jpg" alt="Sarah Johnson" class="author-avatar">
+                        <div class="author-info">
+                            <h5>Sarah Johnson</h5>
+                            <p>Tennis Player</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"As a beginner in boxing, I was nervous about starting. The coaches made me feel welcome and confident. The training is intense but rewarding. Highly recommend!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/box cocah.jpg" alt="Mike Chen" class="author-avatar">
+                        <div class="author-info">
+                            <p>Boxing Enthusiast</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"The swimming coaching here is world-class. My daughter's confidence in the water has grown tremendously. The pool facilities are clean and well-maintained."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/swim.jpg" alt="Angela Rodriguez" class="author-avatar">
+                        <div class="author-info">
+                            <p>Parent</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Info Section -->
+    <section class="contact-info-section">
+        <div class="container">
+            <h2>Need Help Booking?</h2>
+            <p class="contact-subtitle">Our team is here to assist you with any questions</p>
+
+            <div class="contact-info-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Call Us</h4>
+                        <p>+233283094284</p>
+                        <p>Mon-Fri: 8AM-8PM</p>
+                        <p>Sat-Sun: 9AM-6PM</p>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Email Us</h4>
+                        <p>bookings@pentvars.co.za</p>
+                        <p>info@pentvars.co.za</p>
+                        <p>24/7 Response</p>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Visit Us</h4>
+                        <p>Pentvars University</p>
+                        <p>Sports Complex</p>
+                        <p>Greater Accra, Sowutuom</p>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Operating Hours</h4>
+                        <p>Mon-Fri: 6AM-10PM</p>
+                        <p>Saturday: 7AM-8PM</p>
+                        <p>Sunday: 8AM-6PM</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="emergency-contact">
+                <h4>Emergency Contact</h4>
+                <p>For urgent matters outside business hours: <strong>+233283094284</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-container"></div>
+
+    <div id="footer-container"></div>
+</body>
+</html>

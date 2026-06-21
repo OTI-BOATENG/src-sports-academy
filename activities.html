@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activities - Pentvars SRC Sports Academy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pT7LBvFy+0xfBWR2p15dGiDxC4ATRjBbKP+wq4OTAL/vc8pJuZD1fsXxCvqy9C0El67OgTNP4Y1bGllEA1l9Pg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/PU logo.png" alt="Pentvars SRC Sports Logo">
+                <h2>Pentvars SRC Sports</h2>
+            </div>
+            <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="sports.html">Sports</a></li>
+                <li><a href="activities.html" class="active">Activities</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="booking.html">Book</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section class="activities-hero" aria-labelledby="activities-hero-title">
+            <div class="hero-copy">
+                <p class="eyebrow">New Academy Activities</p>
+                <h1 id="activities-hero-title">Train Hard. Learn Together.</h1>
+                <p>Discover our newest academy activities with expert coaching in wrestling, taekwondo, judo and volleyball. This season is built for skill growth, confidence, and community support.</p>
+                <a href="booking.html" class="btn btn-primary">Join Now</a>
+            </div>
+        </section>
+
+        <section class="section activity-grid" aria-label="Featured academy activities">
+            <article class="activity-card">
+                <img src="images/Wrestling.jpg" alt="Wrestling training session with coach">
+                <div class="activity-card-body">
+                    <h2>Wrestling</h2>
+                    <p>Experience action-packed wrestling sessions focused on strength, technique, takedowns and live sparring workouts.</p>
+                    <p class="activity-meta"><strong>Schedule:</strong> Wed &amp; Sat, 7:00 PM – 9:00 PM</p>
+                    <a href="booking.html" class="btn">Book Training</a>
+                </div>
+            </article>
+
+            <article class="activity-card">
+                <img src="images/Taekwondo.jpg" alt="Taekwondo training in the academy">
+                <div class="activity-card-body">
+                    <h2>Taekwondo</h2>
+                    <p>Build martial arts discipline with kicking drills, sparring practice and flexibility training for every level.</p>
+                    <p class="activity-meta"><strong>Schedule:</strong> Mon, Thu, Fri, 6:00 PM – 8:00 PM</p>
+                    <a href="booking.html" class="btn">Book Training</a>
+                </div>
+            </article>
+
+            <article class="activity-card">
+                <img src="images/Judo.jpg" alt="Judo training and grappling practice">
+                <div class="activity-card-body">
+                    <h2>Judo</h2>
+                    <p>Learn balance, throws and ground control through structured judo practice led by experienced instructors.</p>
+                    <p class="activity-meta"><strong>Schedule:</strong> Tue &amp; Thu, 4:00 PM – 6:00 PM</p>
+                    <a href="booking.html" class="btn">Book Training</a>
+                </div>
+            </article>
+
+            <article class="activity-card">
+                <img src="images/Volleyball.jpg" alt="Volleyball team training session">
+                <div class="activity-card-body">
+                    <h2>Volleyball</h2>
+                    <p>Join team volleyball drills to sharpen serving, spiking, blocking and court communication in every session.</p>
+                    <p class="activity-meta"><strong>Schedule:</strong> Wed &amp; Fri, 5:00 PM – 7:00 PM</p>
+                    <a href="booking.html" class="btn">Book Training</a>
+                </div>
+            </article>
+        </section>
+
+        <section class="community-section" aria-labelledby="community-title">
+            <div class="community-copy">
+                <p class="eyebrow">Community Hub</p>
+                <h2 id="community-title">Live Q&A + Athlete Forum</h2>
+                <p>Tap into our athlete network for expert answers, skill tips, and coaching support. Share your training wins and stay connected with the academy community.</p>
+            </div>
+
+            <div class="community-layout">
+                <div class="qa-board" role="region" aria-labelledby="community-qa-title">
+                    <div class="board-heading">
+                        <h3 id="community-qa-title">Recent Discussions</h3>
+                        <p>Browse the latest athlete questions and training insights from our active community.</p>
+                    </div>
+                    <article class="qa-card">
+                        <div class="qa-card-header">
+                            <span class="qa-tag">Technique</span>
+                            <h4>How do I improve my takedown speed?</h4>
+                        </div>
+                        <p>Focus on level-change drills, quick footwork and partner resistance routines. Practice consistently to build explosive movement.</p>
+                        <div class="qa-meta">
+                            <span><i class="fas fa-comments"></i> 12 replies</span>
+                            <span><i class="fas fa-clock"></i> 2 hours ago</span>
+                        </div>
+                        <button class="btn btn-secondary" type="button"><i class="fas fa-comment-dots"></i> Join Discussion</button>
+                    </article>
+                    <article class="qa-card">
+                        <div class="qa-card-header">
+                            <span class="qa-tag">Warm-up</span>
+                            <h4>What is the best warm-up for judo?</h4>
+                        </div>
+                        <p>Start with mobility, joint rotations and dynamic drills, then move into ukemi and light grip work before full practice.</p>
+                        <div class="qa-meta">
+                            <span><i class="fas fa-comments"></i> 9 replies</span>
+                            <span><i class="fas fa-clock"></i> 5 hours ago</span>
+                        </div>
+                        <button class="btn btn-secondary" type="button"><i class="fas fa-comment-dots"></i> Join Discussion</button>
+                    </article>
+                    <article class="qa-card">
+                        <div class="qa-card-header">
+                            <span class="qa-tag">Motivation</span>
+                            <h4>How can I stay consistent when training is intense?</h4>
+                        </div>
+                        <p>Set small milestones, track progress after every session, and share goals with teammates for accountability.</p>
+                        <div class="qa-meta">
+                            <span><i class="fas fa-comments"></i> 18 replies</span>
+                            <span><i class="fas fa-clock"></i> 1 day ago</span>
+                        </div>
+                        <button class="btn btn-secondary" type="button"><i class="fas fa-comment-dots"></i> Join Discussion</button>
+                    </article>
+                </div>
+
+                <div class="community-sidebar">
+                    <form class="qa-form" aria-labelledby="qa-form-title">
+                        <h3 id="qa-form-title"><i class="fas fa-lightbulb"></i> Ask the Community</h3>
+                        <p class="form-note">Submit your question and one of our coaches or members will respond shortly.</p>
+                        <label for="question">Your training question</label>
+                        <textarea id="question" name="question" rows="4" placeholder="Type your training question here…" required></textarea>
+                        <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Submit Question</button>
+                    </form>
+
+                    <div class="facebook-widget">
+                        <h3><i class="fab fa-facebook-f"></i> Join Us on Facebook</h3>
+                        <p>Connect with our community on social media for daily training tips, event updates, and exclusive content.</p>
+                        <a href="https://www.facebook.com/share/1BbemBGvGY/?mibextid=wwXIfr" class="btn btn-facebook" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-facebook-f"></i> Follow on Facebook
+                        </a>
+                        <div class="facebook-embed">
+                            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BbemBGvGY%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=" width="100%" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section logo-section">
+                <img src="images/PU LOGOO.png" alt="Pentvars SRC Sports Logo" class="footer-logo">
+                <h3>Pentvars SRC Sports Academy</h3>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="sports.html">Sports</a></li>
+                    <li><a href="activities.html">Activities</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p>Address: 123 Sports Lane, City, Country</p>
+                <p>Phone: (123) 456-7890</p>
+                <p>Email: info@pentvars.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <p>Social media links coming soon!</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/share/1BbemBGvGY/?mibextid=wwXIfr" aria-label="Facebook" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram" class="instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/pentvars" aria-label="X" class="twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <p>&copy; 2026 Pentvars SRC Sports Academy. All rights reserved.</p>
+    </footer>
+</body>
+</html>

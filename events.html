@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - Pentvars SRC Sports Academy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pT7LBvFy+0xfBWR2p15dGiDxC4ATRjBbKP+wq4OTAL/vc8pJuZD1fsXxCvqy9C0El67OgTNP4Y1bGllEA1l9Pg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/PU logo.png" alt="Pentvars SRC Sports Logo">
+                <h2>Pentvars SRC Sports</h2>
+            </div>
+            <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="sports.html">Sports</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="events.html" class="active">Events</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="booking.html">Book</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- Events Hero Section -->
+        <section class="events-hero" aria-labelledby="events-hero-title">
+            <div class="hero-copy">
+                <p class="eyebrow">Sports Calendar</p>
+                <h1 id="events-hero-title">Upcoming Events & Competitions</h1>
+                <p>Join us for exciting sports events, tournaments, and competitions. Register now to participate and showcase your skills!</p>
+                <a href="#events-grid" class="btn btn-hero">View All Events</a>
+            </div>
+        </section>
+
+        <!-- Event Filters/Stats -->
+        <section class="events-stats" aria-label="Event statistics">
+            <div class="stat-card">
+                <i class="fas fa-calendar-alt"></i>
+                <h3>15+</h3>
+                <p>Upcoming Events</p>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-users"></i>
+                <h3>500+</h3>
+                <p>Participants</p>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-trophy"></i>
+                <h3>8</h3>
+                <p>Competition Types</p>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>3</h3>
+                <p>Venues</p>
+            </div>
+        </section>
+
+        <!-- Upcoming Events Grid -->
+        <section class="events-grid-section" id="events-grid" aria-labelledby="events-title">
+            <div class="events-header">
+                <h2 id="events-title">Upcoming Sports Events</h2>
+                <p>Mark your calendars and register for your favorite events</p>
+            </div>
+
+            <div class="events-grid">
+                <!-- Event Card 1 -->
+                <article class="event-card" role="region" aria-labelledby="event-1-title">
+                    <div class="event-image-wrapper">
+                        <img src="images/Wrestling.jpg" alt="Summer Soccer Tournament event banner" class="event-image">
+                        <span class="event-status featured">Featured</span>
+                        <span class="event-category">Tournament</span>
+                    </div>
+                    <div class="event-content">
+                        <h3 id="event-1-title">Summer Wrestling Tournament</h3>
+                        <div class="event-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-calendar-check"></i>
+                                <span>June 1-7, 2026</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>9:00 AM - 5:00 PM</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Main Sports Hall</span>
+                            </div>
+                        </div>
+                        <p class="event-description">Experience high-intensity wrestling competitions with athletes from across the region. Multiple weight categories and skill levels.</p>
+                        <div class="event-details">
+                            <div class="detail-badge">
+                                <i class="fas fa-users"></i>
+                                <span>200+ Participants</span>
+                            </div>
+                            <div class="detail-badge">
+                                <i class="fas fa-medal"></i>
+                                <span>Cash Prizes</span>
+                            </div>
+                        </div>
+                        <a href="register.html" class="btn btn-primary" aria-label="Register for Summer Wrestling Tournament">
+                            <i class="fas fa-edit"></i> Register Now
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Event Card 2 -->
+                <article class="event-card" role="region" aria-labelledby="event-2-title">
+                    <div class="event-image-wrapper">
+                        <img src="images/Volleyball.jpg" alt="Basketball Championship event banner" class="event-image">
+                        <span class="event-category">Championship</span>
+                    </div>
+                    <div class="event-content">
+                        <h3 id="event-2-title">Basketball Championship Finals</h3>
+                        <div class="event-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-calendar-check"></i>
+                                <span>July 15, 2026</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>3:00 PM - 10:00 PM</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Academy Arena</span>
+                            </div>
+                        </div>
+                        <p class="event-description">Watch the most talented basketball teams compete for the championship title. Live commentary and refreshments available.</p>
+                        <div class="event-details">
+                            <div class="detail-badge">
+                                <i class="fas fa-users"></i>
+                                <span>8 Teams</span>
+                            </div>
+                            <div class="detail-badge">
+                                <i class="fas fa-star"></i>
+                                <span>Elite Level</span>
+                            </div>
+                        </div>
+                        <a href="register.html" class="btn btn-primary" aria-label="Register to attend Basketball Championship Finals">
+                            <i class="fas fa-ticket-alt"></i> Attend Event
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Event Card 3 -->
+                <article class="event-card" role="region" aria-labelledby="event-3-title">
+                    <div class="event-image-wrapper">
+                        <img src="images/swimming.jpg" alt="Swimming Gala Championship event banner" class="event-image">
+                        <span class="event-category">Championship</span>
+                    </div>
+                    <div class="event-content">
+                        <h3 id="event-3-title">Swimming Gala Championship</h3>
+                        <div class="event-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-calendar-check"></i>
+                                <span>August 20, 2026</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>2:00 PM - 8:00 PM</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Aquatic Center</span>
+                            </div>
+                        </div>
+                        <p class="event-description">Showcase your swimming skills in this prestigious gala event featuring multiple swimming disciplines, relays, and individual competitions.</p>
+                        <div class="event-details">
+                            <div class="detail-badge">
+                                <i class="fas fa-trophy"></i>
+                                <span>Championship Level</span>
+                            </div>
+                            <div class="detail-badge">
+                                <i class="fas fa-users"></i>
+                                <span>All Ages</span>
+                            </div>
+                        </div>
+                        <a href="register.html" class="btn btn-primary" aria-label="Register for Swimming Gala Championship">
+                            <i class="fas fa-swimmer"></i> Register Now
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Event Card 4 -->
+                <article class="event-card" role="region" aria-labelledby="event-4-title">
+                    <div class="event-image-wrapper">
+                        <img src="images/Judo.jpg" alt="Judo Grand Championship event banner" class="event-image">
+                        <span class="event-status">Upcoming</span>
+                        <span class="event-category">Championship</span>
+                    </div>
+                    <div class="event-content">
+                        <h3 id="event-4-title">Judo Grand Championship</h3>
+                        <div class="event-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-calendar-check"></i>
+                                <span>September 5-6, 2026</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>8:00 AM - 6:00 PM</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Central Arena</span>
+                            </div>
+                        </div>
+                        <p class="event-description">International judo competition featuring world-class athletes. Two days of intense matches and demonstrations.</p>
+                        <div class="event-details">
+                            <div class="detail-badge">
+                                <i class="fas fa-globe"></i>
+                                <span>International</span>
+                            </div>
+                            <div class="detail-badge">
+                                <i class="fas fa-medal"></i>
+                                <span>World Class</span>
+                            </div>
+                        </div>
+                        <a href="register.html" class="btn btn-primary" aria-label="Register for Judo Grand Championship">
+                            <i class="fas fa-edit"></i> Register Now
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Event Card 5 -->
+                <article class="event-card" role="region" aria-labelledby="event-5-title">
+                    <div class="event-image-wrapper">
+                        <img src="images/Rugby.jpg" alt="Rugby League tournament event banner" class="event-image">
+                        <span class="event-category">Tournament</span>
+                    </div>
+                    <div class="event-content">
+                        <h3 id="event-5-title">Rugby League Regional Tournament</h3>
+                        <div class="event-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-calendar-check"></i>
+                                <span>October 12-13, 2026</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>10:00 AM - 8:00 PM</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Rugby Grounds</span>
+                            </div>
+                        </div>
+                        <p class="event-description">Competitive rugby league matches between regional teams. Fast-paced action and sportsmanship showcase.</p>
+                        <div class="event-details">
+                            <div class="detail-badge">
+                                <i class="fas fa-users"></i>
+                                <span>12 Teams</span>
+                            </div>
+                            <div class="detail-badge">
+                                <i class="fas fa-trophy"></i>
+                                <span>Regional Level</span>
+                            </div>
+                        </div>
+                        <a href="register.html" class="btn btn-primary" aria-label="Register for Rugby League Regional Tournament">
+                            <i class="fas fa-ticket-alt"></i> Attend Event
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Event Card 6 -->
+                <article class="event-card" role="region" aria-labelledby="event-6-title">
+                    <div class="event-image-wrapper">
+                        <img src="images/award.jpg" alt="Annual Sports Gala event banner" class="event-image">
+                        <span class="event-category">Gala</span>
+                    </div>
+                    <div class="event-content">
+                        <h3 id="event-6-title">Annual Sports Gala & Awards Ceremony</h3>
+                        <div class="event-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-calendar-check"></i>
+                                <span>November 20, 2026</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>6:00 PM - 10:00 PM</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Grand Ballroom</span>
+                            </div>
+                        </div>
+                        <p class="event-description">Celebrate the year's achievements with awards, entertainment, and networking. Formal dress event with dinner included.</p>
+                        <div class="event-details">
+                            <div class="detail-badge">
+                                <i class="fas fa-award"></i>
+                                <span>Awards Night</span>
+                            </div>
+                            <div class="detail-badge">
+                                <i class="fas fa-utensils"></i>
+                                <span>Dinner Included</span>
+                            </div>
+                        </div>
+                        <a href="register.html" class="btn btn-primary" aria-label="Register for Annual Sports Gala & Awards Ceremony">
+                            <i class="fas fa-edit"></i> Register Now
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="events-cta" aria-labelledby="cta-title">
+            <h2 id="cta-title">Don't Miss Out!</h2>
+            <p>Register now for any of our upcoming events and be part of the Pentvars SRC Sports Academy community.</p>
+            <a href="register.html" class="btn btn-cta">Register for Events</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+</body>
+</html>

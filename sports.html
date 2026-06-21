@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports - Pentvars SRC Sports Academy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pT7LBvFy+0xfBWR2p15dGiDxC4ATRjBbKP+wq4OTAL/vc8pJuZD1fsXxCvqy9C0El67OgTNP4Y1bGllEA1l9Pg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/PU logo.png" alt="Pentvars SRC Sports Logo">
+                <h2>Pentvars SRC Sports</h2>
+            </div>
+            <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="sports.html" class="active">Sports</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="booking.html">Book</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section class="sports-intro">
+            <h1>Our Sports Offerings</h1>
+            <p>Discover a wide range of sports training programs designed to build skills, fitness, and teamwork. Join our academy and excel in your favorite sport!</p>
+        </section>
+
+        <section class="sports-grid">
+            <article class="sport-card">
+                <div class="card-header">
+                    <img src="images/soccer.jpg" alt="Football training session">
+                    <div class="icon-overlay"><i class="fas fa-futbol"></i></div>
+                </div>
+                <div class="card-content">
+                    <h3>Football</h3>
+                    <p>Master the fundamentals of football with professional coaching. Develop speed, agility, and team strategies.</p>
+                    <p class="schedule"><strong>Training:</strong> Mon, Wed, Fri - 4:00 PM to 6:00 PM</p>
+                    <a href="booking.html" class="btn">Book Now</a>
+                </div>
+            </article>
+
+            <article class="sport-card">
+                <div class="card-header">
+                    <img src="images/Rugby.jpg" alt="Rugby training">
+                    <div class="icon-overlay"><i class="fas fa-football-ball"></i></div>
+                </div>
+                <div class="card-content">
+                    <h3>Rugby</h3>
+                    <p>Experience the intensity of rugby with focus on strength, endurance, and tactical gameplay.</p>
+                    <p class="schedule"><strong>Training:</strong> Tue, Thu - 5:00 PM to 7:00 PM</p>
+                    <a href="booking.html" class="btn">Book Now</a>
+                </div>
+            </article>
+
+            <article class="sport-card">
+                <div class="card-header">
+                    <img src="images/Ballet.jpg" alt="Ballet class">
+                    <div class="icon-overlay"><i class="fas fa-shoe-prints"></i></div>
+                </div>
+                <div class="card-content">
+                    <h3>Ballet</h3>
+                    <p>Grace and poise through ballet training. Perfect for building flexibility, balance, and artistic expression.</p>
+                    <p class="schedule"><strong>Training:</strong> Mon-Fri - 10:00 AM to 12:00 PM</p>
+                    <a href="booking.html" class="btn">Book Now</a>
+                </div>
+            </article>
+
+            <article class="sport-card">
+                <div class="card-header">
+                    <img src="images/table_tennis.jpg" alt="Table Tennis match">
+                    <div class="icon-overlay"><i class="fas fa-table-tennis"></i></div>
+                </div>
+                <div class="card-content">
+                    <h3>Table Tennis</h3>
+                    <p>Sharpen your reflexes and precision with table tennis. Ideal for quick thinking and hand-eye coordination.</p>
+                    <p class="schedule"><strong>Training:</strong> Wed, Sat - 3:00 PM to 5:00 PM</p>
+                    <a href="booking.html" class="btn">Book Now</a>
+                </div>
+            </article>
+
+            <article class="sport-card">
+                <div class="card-header">
+                    <img src="images/handball.jpg" alt="Handball game">
+                    <div class="icon-overlay"><i class="fas fa-baseball-ball"></i></div>
+                </div>
+                <div class="card-content">
+                    <h3>Handball</h3>
+                    <p>Fast-paced action with handball training. Improve throwing accuracy, defense, and team communication.</p>
+                    <p class="schedule"><strong>Training:</strong> Tue, Fri - 6:00 PM to 8:00 PM</p>
+                    <a href="booking.html" class="btn">Book Now</a>
+                </div>
+            </article>
+
+            <article class="sport-card">
+                <div class="card-header">
+                    <img src="images/Gymnastics.jpg" alt="Gymnastics routine">
+                    <div class="icon-overlay"><i class="fas fa-running"></i></div>
+                </div>
+                <div class="card-content">
+                    <h3>Gymnastics</h3>
+                    <p>Build strength, flexibility, and acrobatic skills through comprehensive gymnastics programs.</p>
+                    <p class="schedule"><strong>Training:</strong> Mon, Thu - 9:00 AM to 11:00 AM</p>
+                    <a href="booking.html" class="btn">Book Now</a>
+                </div>
+            </article>
+
+            <article class="sport-card">
+                <div class="card-header">
+                    <img src="images/Wrestling.jpg" alt="Wrestling match">
+                    <div class="icon-overlay"><i class="fas fa-user-friends"></i></div>
+                </div>
+                <div class="card-content">
+                    <h3>Wrestling</h3>
+                    <p>Learn wrestling techniques focusing on grappling, takedowns, and physical conditioning.</p>
+                    <p class="schedule"><strong>Training:</strong> Wed, Sat - 7:00 PM to 9:00 PM</p>
+                    <a href="booking.html" class="btn">Book Now</a>
+                </div>
+            </article>
+
+            <article class="sport-card">
+                <div class="card-header">
+                    <img src="images/Taekwondo.jpg" alt="Taekwondo demonstration">
+                    <div class="icon-overlay"><i class="fas fa-fist-raised"></i></div>
+                </div>
+                <div class="card-content">
+                    <h3>Taekwondo</h3>
+                    <p>Master martial arts with Taekwondo. Emphasizes discipline, self-defense, and mental focus.</p>
+                    <p class="schedule"><strong>Training:</strong> Mon-Fri - 6:00 PM to 8:00 PM</p>
+                    <a href="booking.html" class="btn">Book Now</a>
+                </div>
+            </article>
+
+            <article class="sport-card">
+                <div class="card-header">
+                    <img src="images/Judo.jpg" alt="Judo practice">
+                    <div class="icon-overlay"><i class="fas fa-user-ninja"></i></div>
+                </div>
+                <div class="card-content">
+                    <h3>Judo</h3>
+                    <p>Develop balance and leverage through Judo techniques. Great for physical fitness and mental resilience.</p>
+                    <p class="schedule"><strong>Training:</strong> Tue, Thu - 4:00 PM to 6:00 PM</p>
+                    <a href="booking.html" class="btn">Book Now</a>
+                </div>
+            </article>
+
+            <article class="sport-card">
+                <div class="card-header">
+                    <img src="images/volleyball.jpg" alt="Volleyball game">
+                    <div class="icon-overlay"><i class="fas fa-volleyball-ball"></i></div>
+                </div>
+                <div class="card-content">
+                    <h3>Volleyball</h3>
+                    <p>Spike your way to success with volleyball training. Focus on serving, spiking, and team coordination.</p>
+                    <p class="schedule"><strong>Training:</strong> Wed, Fri - 5:00 PM to 7:00 PM</p>
+                    <a href="booking.html" class="btn">Book Now</a>
+                </div>
+            </article>
+        </section>
+    </main>
+    <div id="footer-container"></div>
+    
+</body>
+</html>
